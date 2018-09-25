@@ -18,7 +18,7 @@ body, a:link, a:visited, a:active{
   color: darkblue;
 }
 
-.title, .addDancerButton{
+.title, .lineUp, .addDancerButton{
   padding:5px 12px;
   float:right;
 
@@ -27,16 +27,20 @@ body, a:link, a:visited, a:active{
   color: darkblue;
 }
 
+.lineUp {
+  float: left;
+}
+
 .addDancerButton: hover {
-  text-shadow: 2px black;
+  text-shadow: 2px 2px black;
 }
 
 .topbar{
   height:32px;
-  background-color: rgba(255, 255, 255, 0.719);
+  background-color: rgba(255, 255, 255, 0.548);
   text-transform: uppercase;
 }
-.title{
+.title, .lineUp{
   background-color: rgba(255, 255, 255, 0.774);
   border: 2px black;
 }
@@ -59,23 +63,38 @@ body, a:link, a:visited, a:active{
   animation:spin 4s linear infinite;
 }
 
-.slide {
-  position: relative;
-  animation: slide 0.5s forwards;
-  animation-delay: 0.5s;
-  animation-duration: 2s;
+.dancer:hover {
+  animation: bounce 0.5s;
   animation-direction: alternate;
   animation-iteration-count: infinite;
 }
 
-@-webkit-keyframes slide {
-  100% { left: 0; }
+@keyframes bounce {
+  from { transform: translate3d(0, 0, 0);     }
+  to   { transform: translate3d(0, -50px, 0); }
 }
 
-@keyframes slide {
-  100% { left: 20%; }
+
+.shake {
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s; 
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite; 
 }
 
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
 
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }

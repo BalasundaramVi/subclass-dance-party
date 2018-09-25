@@ -28,6 +28,22 @@ $(document).ready(function() {
       dataType
     );
     $('body').append(dancer.$node);
+    window.dancers.push(dancer);
   });
+
+  $('.lineUp').on('click', function(event) {
+    debugger;
+    var cCount = 0;
+    var aCount = 0;
+    for (var i = 0; i < window.dancers.length; i++) {
+      if (window.dancers[i].typeOfDancer === '<img src="assets/images/c3p0.png" class="dancer"></img>') {
+        cCount++;
+        window.dancers[i].lineUp(cCount, 300);
+      } else {
+        aCount++;
+        window.dancers[i].lineUp(aCount, 10);
+      }
+    }
+  })
 });
 

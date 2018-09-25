@@ -80,6 +80,8 @@ var Interact = function() {
     if (closestNeighbor !== undefined) {
       currentDancer.setPosition((cY + tY)/2, (cX + tX)/2 - 60);
       closestNeighbor.setPosition((cY + tY)/2, (cX + tX)/2 + 60);
+      currentDancer.$node.addClass('pair');
+      currentDancer.$node.addClass('pair');
     }
   }
 

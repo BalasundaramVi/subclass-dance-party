@@ -32,7 +32,6 @@ $(document).ready(function() {
   });
 
   $('.lineUp').on('click', function(event) {
-    debugger;
     var cCount = 0;
     var aCount = 0;
     for (var i = 0; i < window.dancers.length; i++) {
@@ -46,4 +45,3 @@ $(document).ready(function() {
     }
   })
 });
-

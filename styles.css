@@ -18,7 +18,7 @@ body, a:link, a:visited, a:active{
   color: darkblue;
 }
 
-.title, .lineUp, .addDancerButton{
+.title, .lineUp, .clearPage, .addDancerButton{
   padding:5px 12px;
   float:right;
 
@@ -27,8 +27,12 @@ body, a:link, a:visited, a:active{
   color: darkblue;
 }
 
-.lineUp {
+.title, .clearPage {
   float: left;
+}
+
+.lineUp {
+  float: right;
 }
 
 .addDancerButton: hover {
@@ -40,9 +44,9 @@ body, a:link, a:visited, a:active{
   background-color: rgba(255, 255, 255, 0.548);
   text-transform: uppercase;
 }
-.title, .lineUp{
+.title, .lineUp, .clearPage{
   background-color: rgba(255, 255, 255, 0.774);
-  border: 2px black;
+  border: 10px black;
 }
 
 .dancer {

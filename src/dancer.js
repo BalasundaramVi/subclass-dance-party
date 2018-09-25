@@ -1,5 +1,6 @@
-var makeDancer = function (top, left, timeBetweenSteps) {
-  this.$node = $('<span class="dancer"></span>');
+var makeDancer = function (top, left, timeBetweenSteps, typeOfDancer) {
+  this.typeOfDancer = typeOfDancer;
+  this.$node = $(typeOfDancer);
   this.step();
   this.setPosition(top, left);
 };

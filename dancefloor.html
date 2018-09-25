@@ -6,11 +6,18 @@
     <script src="lib/jquery.js"></script>
     <script src="src/dancer.js"></script>
     <script src="src/blinkyDancer.js"></script>
+    <script src="src/spinnyDancer.js"></script>
+    <script src="src/slidingDancer.js"></script>
   </head>
-  <body>
+  <body background="assets/images/space.jpg" >
     <div class="topbar">
-      <span class="title">object dance party</span>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeBlinkyDancer">add a blinky dancer</a>    </div>
+      <span class="title">SPACE JAM 3</span>
+      <a href="#" class="addDancerButton" data-dancer-type='<img src="assets/images/astronaut.png" class="dancer"></img>' data-dancer-maker-function-name="makeDancer">add an Astronaut</a>
+      <a href="#" class="addDancerButton" data-dancer-type='<img src="assets/images/c3p0.png" class="dancer"></img>' data-dancer-maker-function-name="makeDancer">add a C3P0 Unit</a>
+      <a href="#" class="addDancerButton" data-dancer-type='<img src="assets/images/astronaut.png" class="dancer"></img>' data-dancer-maker-function-name="makeBlinkyDancer">add a Blinky Astronaut</a>
+      <a href="#" class="addDancerButton" data-dancer-type='<img src="assets/images/astronaut.png" class="dancer"></img>' data-dancer-maker-function-name="makeSpinnyDancer">add a Spinning Astronaut</a>
+      <a href="#" class="addDancerButton" data-dancer-type='<img src="assets/images/c3p0.png" class="dancer"></img>' data-dancer-maker-function-name="makeSlidingDancer">add a Sliding C3P0</a>
+    </div>
     <script src="src/init.js"></script>
   </body>
 </html>

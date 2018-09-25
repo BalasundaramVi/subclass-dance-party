@@ -18,7 +18,7 @@ body, a:link, a:visited, a:active{
   color: darkblue;
 }
 
-.title, .lineUp, .clearPage, .addDancerButton{
+.title, .lineUp, .deathstar, .addDancerButton{
   padding:5px 12px;
   float:right;
 
@@ -27,7 +27,7 @@ body, a:link, a:visited, a:active{
   color: darkblue;
 }
 
-.title, .clearPage {
+.title, .deathstar {
   float: left;
 }
 
@@ -44,7 +44,7 @@ body, a:link, a:visited, a:active{
   background-color: rgba(255, 255, 255, 0.548);
   text-transform: uppercase;
 }
-.title, .lineUp, .clearPage{
+.title, .lineUp, .deathstar, .clearPage{
   background-color: rgba(255, 255, 255, 0.774);
   border: 10px black;
 }

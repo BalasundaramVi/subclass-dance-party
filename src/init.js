@@ -46,6 +46,42 @@ $(document).ready(function() {
   })
 
   $('.deathstar').on('click', function(event) {
-    
-  })
+    Interact();
+  });
+  setTimeout(Interact, 5000);
 });
+
+var Interact = function() {
+  for (var i = 0; i < window.dancers.length; i++) {
+
+    var maxDistance = 300;
+    var currentDancer = window.dancers[i];
+    var cX = currentDancer.$node["0"].x;
+    var cY = currentDancer.$node["0"].y;
+    var tX, tY;
+
+    var closestNeighbor;
+    for (var j = 0; j < window.dancers.length; j++) {
+      if (i === j) {
+        continue;
+      }
+      var compareDancer = window.dancers[j];
+      var nX = compareDancer.$node["0"].x;
+      var nY = compareDancer.$node["0"].y;
+      var distance = Math.sqrt(Math.pow((cX-nX), 2) + Math.pow((cY-nY), 2));
+      if (distance < maxDistance) {
+        closestNeighbor = window.dancers[j];
+        maxDistance = distance;
+        tX = nX;
+        tY = nY;
+      }
+    }
+
+    if (closestNeighbor !== undefined) {
+      currentDancer.setPosition((cY + tY)/2, (cX + tX)/2 - 60);
+      closestNeighbor.setPosition((cY + tY)/2, (cX + tX)/2 + 60);
+    }
+  }
+
+  setTimeout(Interact, 5000);
+}
